@@ -1,0 +1,29 @@
+Dane:
+
+    rozmiar labiryntu:
+    oś x - ax_x,
+    oś y - ax_y.
+
+        ścieżka przebyta dotychczas przez pointer - path[[x1, y1], [x2, y2], [x3, y3], ...]
+        punkt w którym jest program w danym momencie - pointer[a, b]
+        tablica 3d interpretująca sam labirynt - walls[0, ax_x - 1][0, ax_y -1 ][0, 3] = 0/1
+
+    funkcje:
+    a_sum - sumuje boki, jeżeli równy 4 to nie łączy się z żadnym bokiem
+    r_direction - losuje ściankę, która nie jest równa 0
+    check - sprawdza czy wszystkie pozycje dookoła nie są: bokami labiryntu, albo a_sum dookoła punktu
+
+
+Algorytm:
+I.   START - Przypisuje początkową pozycję (do zmiennej pointer)
+# tu się zaczyna funkcja maze()
+II.  Losuję stroną, w którą ma pójść labirynt
+        tworzymy tablicę dir - 4-elemntowa tablica, która uwzględnia opcje
+        w sumie to 3 elemntowa bo z buta usuwamy drogę z której przyszliśmy
+        usuwamy też opcje, które są krańcami labiryntu
+        usuwamt też opcje prowadzące do pozycji należących już do path( do pozycji których suma jest różna od 4)
+        I losujemy pokolei
+        jeżeli dir = Null to cofamy się tak długo, aż będziemy mieli inną opcję
+
+III. END - jeżeli długość ścieżki path jest równa iloczynowi rozmiarów ax_x * ax_y
+

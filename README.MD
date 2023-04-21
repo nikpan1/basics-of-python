@@ -1,0 +1,1 @@
+My early stages with python from 2020

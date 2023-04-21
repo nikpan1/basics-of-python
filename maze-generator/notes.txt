@@ -1,0 +1,13 @@
+
+def move(x, y, add):
+    y += add
+    return x, y
+
+    xcord, ycord = move(xcord, ycord, arrlen)
+
+
+    for i in range(0, ax_y):
+        for j in range(0, ax_x):
+            print(walls[j][i], end='')
+        print(" ")
+    #zapisanie do pliku tekstowego ^

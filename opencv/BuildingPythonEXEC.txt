@@ -1,0 +1,7 @@
+    pip install pyinstaller
+
+i jeżeli jesteś w ścieżce głównego folderu
+w tym przypadku: \UnityProjects\SNS\pythonStuff
+pyinstaller --onefile ImageProcessor.py
+
+gotowy build jest w automatycznie utworzonym folderze dist
